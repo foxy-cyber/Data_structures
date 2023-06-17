@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAACYAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAQAAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAP8AAAD/AAAAAAAAAAgAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAD/AAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAA/wAAAP8AAAAAAAAA/wAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAMAAN/7AADf+wAA3/sAANgbAADf+wAA0AsAAN/7AADQewAA2HsAANz7AADcwwAA3LcAANyvAADfnwAAwD8AAA==" rel="icon" type="image/x-icon" />
+    </head>
+
+    <body>
+        <form action="submit.php" method="get" autocomplete="on">
+            <fieldset>
+                <legend>Application Form
+                </legend>
+                <h2>Note:Form Should be filled atleast 5 days prior to date</h2>
+                <fieldset>
+                    <legend>Person Details</legend>
+                    <label for="fname">FirstName: </label>
+                    <input type="text" name="fname" id="fname" placeholder="" required
+                    autofocus>
+                    <br><br>
+                    <label for="lname">LastName: </label>
+                    <input type="text" name="lname" id="lname" required>
+                    <br><br>
+                    <label for="gender">Gender: </label>
+                    <input type="radio" name="gender" id="male"><label for="male">Male</label>
+                    <input type="radio" name="gender" id="female"><label for="female">Female</label>
+                    <br><br>
+                    <label for="Branch">Branch: </label>
+                    <select name="branch" id="Branch">
+                        <option value="cse">CSE</option>
+                        <option value="ISE">ISE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="others">others</option>
+                    </select>
+                    <br><br>
+                    <label for="dob">DOB: </label>
+                    <input type="date" name="dob" id="dob">
+                    <br><br>
+                    <label for="state">State: </label>
+                    <input list="state">
+                    <datalist id="state">
+                      <option value="Bihar">
+                      <option value="Bangalore">
+                      <option value="Chennai">
+                      <option value="Hyderabad">
+                      <option value="Mumbai">
+                    </datalist>
+                    <br><br>
+                    <label for="Fav-sport">Favourite Sport:</label><input type="checkbox" name="Cricket"
+                        id="cricket"><label for="cricket">Cricket</label>
+                    <input type="checkbox" name="Cricket" id="Basketball"><label for="Basketball">Basketball</label>
+                    <input type="checkbox" name="Cricket" id="others"><label for="others">Others</label>
+                    <br><br>
+                    <label for="fav-color">
+                        Favourite Color:
+                    </label>
+                    <input type="color" name="" id="">
+                    <br><br>
+                    <label for="usn">USN: </label>
+                    <input type="text" id="usn">
+                    <br><br>
+                    <label for="phone-no">Phone No:</label>
+                    <input type="tel" name="Phoneno." placeholder="123-659-2324" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                    <br><br>
+                    <label for="linkedin">Linked Id: </label>
+                    <input type="url" name="linkedin-id" id="linkedin">
+                    <br><br>
+                    <label for="image">Image: </label>
+                    <input type="file" name="image" id="image">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Address Details</legend>
+                    <label for="present-address">Permanent Address:</label>
+                    <textarea name="" id="permanent-address" cols="" rows=""></textarea>
+                    <br><br>
+                    <label for="correspondance-address">Correspodance Address:</label>
+                    <textarea name="" id="" cols="" rows=""></textarea>
+                </fieldset>
+                <br>
+                <input type="checkbox" name="terms-conditions" id="terms-conditions">
+                <label for="terms-conditions">I accepted the terms and conditions</label>
+                <br><br>
+                <!-- Hidden content not shown to user but send to database on submission -->
+                <input type="hidden" id="stud_342" name="stud_342" value="342">
+                <button type="submit">Submit</button>
+                &nbsp;&nbsp;&nbsp;
+                <button type="reset">Reset</button>
+                <!-- <input type="button" value="Submit"> -->
+            </fieldset>
+        </form>
+    </body>
+
+</html>
