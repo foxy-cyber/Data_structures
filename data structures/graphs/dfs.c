@@ -17,7 +17,7 @@ int main()
     int vis[10] = {0};
     double clk;
     clock_t st, ent;
-    printf("Enter the number of cities: ");
+    printf("Enter the number of lands: ");
     scanf("%d", &n);
     printf("Enter the matrix representation:\n");
     for (i = 0; i < n; i++)
@@ -32,7 +32,7 @@ int main()
             }
         }
 
-    printf("Enter the source city: ");
+    printf("Enter the starting land number: ");
     scanf("%d", &s);
 
     st = clock();
