@@ -8,8 +8,8 @@ int bfs(int a[10][10],int n, int sr)
     q[++r]=sr;
     //set the starting land number inputted as visited
     vis[sr]=1;
-    printf("\nTRAVERSED BFS:");
-    while(f<=r)
+    printf("\nTRAVERSED BFS:\n");
+    while(f<=r)//explore
     {
         u=q[f++];//dequeue the element and explore it completely
         for(v=1;v<=n;v++)
@@ -17,7 +17,7 @@ int bfs(int a[10][10],int n, int sr)
         {
             q[++r]=v;//add to QUEUE
             vis[v]=1;//mark as visited
-            printf("%d %d___",u,v);
+            printf("%d %d \n",u,v);
         }
     }
 
