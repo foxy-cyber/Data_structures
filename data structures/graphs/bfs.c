@@ -27,8 +27,8 @@ int main()
     printf("Enter the number of cities:");
     scanf("%d",&n);
     printf("Enter the matrix representation\n");
- for (i = 0; i < n; i++)
-        for (j = 0; j < n; j++)
+    for (i = 1; i <=n; i++)
+        for (j = 1; j <=n; j++)
         {
             if (i == j)
                 a[i][j] = 0; // Set diagonal elements to zero

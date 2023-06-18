@@ -1,7 +1,5 @@
-
 #include <stdio.h>
 #include <time.h>
-
 void dfs(int a[10][10], int n, int sr, int vis[10])
 {
     int v;
@@ -31,7 +29,6 @@ int main()
                 scanf("%d", &a[i][j]);
             }
         }
-
     printf("Enter the starting land number: ");
     scanf("%d", &s);
 
@@ -42,6 +39,5 @@ int main()
 
     clk = (double)(ent - st) / CLOCKS_PER_SEC;
     printf("\nTime: %f seconds\n", clk);
-
     return 0;
 }
