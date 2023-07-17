@@ -12,7 +12,6 @@ int place(int k,int i)
 		return FALSE;
     return TRUE;
 }
-
 void nqueens(int k,int n)
 {
 	int i,a;
