@@ -1,45 +1,57 @@
-#include <stdio.h>
-#include <stdbool.h>
+#include<stdio.h>
 
-void subsetSum(int set[], int n, int targetSum, bool solution[], int currSum, int currIndex)
+int count, w[10], d, x[10];
+
+void subset(int cs, int k, int r)
 {
-    if (currSum == targetSum)
+    int i;
+    x[k] = 1;
+    if (cs + w[k] == d)
     {
-        printf("Subset with the given sum found: ");
-        for (int i = 0; i < n; i++)
+        printf("\nSubset solution = %d\n", ++count);
+        for (i = 0; i <= k; i++)
         {
-            if (solution[i])
-                printf("%d ", set[i]);
+            if (x[i] == 1)
+                printf("%d ", w[i]);
         }
         printf("\n");
-        return;
     }
-
-    if (currIndex == n || currSum > targetSum)
-        return;
-
-    // Include the current element in the subset
-    solution[currIndex] = true;
-    subsetSum(set, n, targetSum, solution, currSum + set[currIndex], currIndex + 1);
-
-    // Exclude the current element from the subset
-    solution[currIndex] = false;
-    subsetSum(set, n, targetSum, solution, currSum, currIndex + 1);
-}
-
-void findSubsetSum(int set[], int n, int targetSum)
-{
-    bool solution[n];
-    subsetSum(set, n, targetSum, solution, 0, 0);
+    else if (cs + w[k] + w[k + 1] <= d)
+    {
+        subset(cs + w[k], k + 1, r - w[k]);
+    }
+    if (cs + r - w[k] >= d && cs + w[k + 1] <= d)
+    {
+        x[k] = 0;
+        subset(cs, k + 1, r - w[k]);
+    }
 }
 
 int main()
 {
-    int set[] = {2, 4, 6, 8, 10};
-    int n = sizeof(set) / sizeof(set[0]);
-    int targetSum = 14;
-
-    findSubsetSum(set, n, targetSum);
-
+    int sum = 0, i, n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    printf("Enter the elements in ascending order: ");
+    for (i = 0; i < n; i++)
+        scanf("%d", &w[i]);
+    printf("Enter the required sum: ");
+    scanf("%d", &d);
+    for (i = 0; i < n; i++)
+        sum += w[i];
+    if (sum < d)
+    {
+        printf("No solution exists.\n");
+    }
+    else
+    {
+        printf("The solution is:\n");
+        count = 0;
+        subset(0, 0, sum);
+        if (count == 0)
+        {
+            printf("No solution exists.\n");
+        }
+    }
     return 0;
 }
