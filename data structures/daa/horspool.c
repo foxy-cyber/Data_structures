@@ -1,13 +1,13 @@
 #include<stdio.h>
 #include<string.h>
 #include<conio.h>
-#define MAX 500
-int t[MAX];
+#define ASCII 500
+int t[ASCII];
 void shifttable(char p[])
 {
  int i,j,m;
  m=strlen(p);
- for(i=0;i<MAX;i++)
+ for(i=0;i<ASCII;i++)
   t[i]=m;
  for(j=0;j<m-1;j++)
   t[p[j]]=m-1-j;
